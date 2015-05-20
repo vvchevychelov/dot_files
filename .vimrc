@@ -43,7 +43,7 @@ augroup words_learning
 augroup END
 
 augroup project
-	autocmd!   
+	autocmd!
 	autocmd BufRead,BufNewFile *.h,*.c,*.cpp set filetype=c.doxygen
 	autocmd BufRead,BufNewFile *.h,*.c,*.cpp set colorcolumn=110
 	autocmd BufRead,BufNewFile *.h,*.c,*.cpp highlight ColorColumn ctermbg=darkgray
