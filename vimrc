@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+" Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
@@ -91,4 +92,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+set hlsearch
+
 
