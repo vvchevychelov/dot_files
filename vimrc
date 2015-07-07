@@ -95,4 +95,14 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set hlsearch
 
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
+
+" disable cursor blinkig
+set guicursor+=a:blinkon0
+
+" bracket highlighting color
+hi MatchParen cterm=none ctermbg=green ctermfg=blue
