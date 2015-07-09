@@ -6,10 +6,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -24,44 +25,53 @@ filetype plugin indent on    " required
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 "set exrc
 "set secure
 
+syntax on
 let mapleader = ","
 
+" buffers switching
+nnoremap _ :bp<CR>
+nnoremap + :bn<CR>
+nnoremap :bs :buffers<CR>
 
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>r :NERDTreeFind<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 
-syntax on
-
-
-" filetype plugin indent on
-
-" how many columns a tab counts for
+set pastetoggle=<F9>
 set tabstop=4
-" how many columns vim uses when you hit Tab in insert mode
 set softtabstop=4
-" how many columns text is indented with the reindent operations
 set shiftwidth=4
-
 set noexpandtab
 set nu
-
-
 set listchars=tab:\ \ ,trail:\ ,extends:>,precedes:<
 set list
-
-" this command lead to inserting first item from pop-up menu
-set pastetoggle=<F9>
-
+set mouse=a
 " set completeopt=menuone,preview
 set wildmenu
 set wildmode=longest:full,full
+
+
+
+set hlsearch
+" disable cursor blinkig
+set guicursor+=a:blinkon0
+"
+" bracket highlighting color
+hi MatchParen cterm=none ctermbg=green ctermfg=blue
+
 
 augroup words_learning
 	autocmd!
@@ -78,31 +88,34 @@ augroup project
 	" let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 augroup END
 
+"""""""""""""""""""""""""""""" Plugin options """""""""""""""""""""""""""""""""""""""""""""
 
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"""""" airline option
+let g:airline_theme='molokai'
+let g:airline_right_sep = ''
+set laststatus=2 
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_warning = ''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '>>'
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 0
 
-set mouse=a
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
 
+
+""""""" You complete me 
 let g:ycm_global_ycm_extra_conf = '~/dot_files/.ycm_extra_conf.py'
 
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
 
+""""""" Ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-set hlsearch
-
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 
 
-" disable cursor blinkig
-set guicursor+=a:blinkon0
-
-" bracket highlighting color
-hi MatchParen cterm=none ctermbg=green ctermfg=blue
