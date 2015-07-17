@@ -70,7 +70,8 @@ set mouse=a
 " set completeopt=menuone,preview
 set wildmenu
 set wildmode=longest:full,full
-
+" hiding unsaved buffer warning when switching files/buffers
+set hidden
 
 
 set hlsearch
