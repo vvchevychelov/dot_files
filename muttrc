@@ -1,6 +1,8 @@
+#set imap_user=
+#set imap_pass=
 #set sendmail="/usr/bin/sendmail"
 set envelope_from=yes
-set from="Vadim Chevychelov <audshch@yandex.ru>"
+#set from=
 set use_from=yes
 set edit_headers=yes
 

@@ -41,6 +41,12 @@ nnoremap + :bn<CR>
 nnoremap :bs :buffers<CR>
 nnoremap :ts :tabs<CR>
 
+
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+
+
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>r :NERDTreeFind<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
