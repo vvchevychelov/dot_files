@@ -41,7 +41,10 @@ nnoremap + :bn<CR>
 nnoremap :bs :buffers<CR>
 nnoremap :ts :tabs<CR>
 
- 
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>r :NERDTreeFind<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -71,7 +74,8 @@ set mouse=a
 " set completeopt=menuone,preview
 set wildmenu
 set wildmode=longest:full,full
-
+" hiding unsaved buffer warning when switching files/buffers
+set hidden
 
 
 set hlsearch
