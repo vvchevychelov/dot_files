@@ -41,6 +41,7 @@ nnoremap + :bn<CR>
 nnoremap :bs :buffers<CR>
 nnoremap :ts :tabs<CR>
 
+ 
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>r :NERDTreeFind<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -125,9 +126,6 @@ let g:ycm_global_ycm_extra_conf = '~/dot_files/.ycm_extra_conf.py'
 
 """"""" Ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-nnoremap <C-P> <C-P><C-R>
-
- 
 if exists("g:ctrl_user_command")
 	  unlet g:ctrlp_user_command
 endif
@@ -139,6 +137,8 @@ let g:ctrlp_custom_ignore = {
    \ 'link': 'some_bad_symbolic_links',
    \ }
 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height=25

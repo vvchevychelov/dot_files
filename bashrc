@@ -6,7 +6,16 @@ alias tmux="TERM=screen-256color tmux"
 #alias tmux="TERM=screen-256color-bce tmux"
 
 alias tree='tree -C'
-alias devel='cd ~/devel/'
+
+alias vi='vim'
+alias v='vim'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../../"
+alias dev="cd ~/devel"
+alias text="vim ~/notes/`date +%Y%m%d_%H%M%S`_note"
+
+
 
 # don`t lose this!
 # sshfs -o allow_other -o kernel_cache -o auto_cache -o reconnect -o compression=no -o cache_timeout=600 -o ServerAliveInterval=15 root@192.168.10.217:/ /mnt/buidv8
