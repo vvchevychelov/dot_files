@@ -65,9 +65,9 @@ noremap <Right> <NOP>
 
 
 set pastetoggle=<F9>
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 set noexpandtab
 set nu
 set listchars=tab:\ \ ,trail:\ ,extends:>,precedes:<
@@ -79,6 +79,8 @@ set wildmode=longest:full,full
 " hiding unsaved buffer warning when switching files/buffers
 set hidden
 
+"set tab name to only name, see help 'statusline'
+set guitablabel=%t
 
 set hlsearch
 " disable cursor blinkig
@@ -118,6 +120,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '>>'
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tabs = 0
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -172,6 +175,5 @@ source ~/.vim/plugin/cscope_maps.vim
 " <Leader>ih switches to file under cursor
 " <Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp)
 " <Leader>ihn cycles through matches 
-
 
 

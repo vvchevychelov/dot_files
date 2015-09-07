@@ -12,5 +12,5 @@ alias devel='cd ~/devel/'
 # sudo sshfs -o allow_other -o kernel_cache -o auto_cache -o reconnect -o compression=no -o cache_timeout=600 -o ServerAliveInterval=15 root@192.168.10.217:/ /mnt/buildv8
 # sudo sshfs -o umask=0000   root@192.168.10.217:/ /mnt/buidv8
 
-alias cs='find . -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > cscope.files;cscope -q -R -b -i cscope.files'
+alias cs='find . -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > cscope.files;cscope -k  -q -R -b -i cscope.files'
 
