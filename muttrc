@@ -1,6 +1,9 @@
 #set imap_user=
 #set imap_pass=
 #set sendmail="/usr/bin/sendmail"
+set from = "audshch@yandex.ru"
+set realname = "Vadim Chevychelov"
+
 set envelope_from=yes
 #set from=
 set use_from=yes
@@ -101,4 +104,4 @@ set sort=threads
 set sort_aux=date
 
 
-source /home/vv/dot_files/mail/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+#source /home/vv/dot_files/mail/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc

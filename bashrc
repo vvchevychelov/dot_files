@@ -13,13 +13,15 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../../"
 alias dev="cd ~/devel"
-alias text="vim ~/notes/`date +%Y%m%d_%H%M%S`_note"
-
+alias note="vim ~/notes/`date +%Y%m%d_%H%M%S`_note"
+alias films="cd /mnt/data/films/"
+alias vimrc="vim ~/dot_files/vimrc"
+alias bashrc="vim ~/dot_files/bashrc"
 
 
 # don`t lose this!
 # sudo sshfs -o allow_other -o kernel_cache -o auto_cache -o reconnect -o compression=no -o cache_timeout=600 -o ServerAliveInterval=15 root@192.168.10.217:/ /mnt/buildv8
 # sudo sshfs -o umask=0000   root@192.168.10.217:/ /mnt/buidv8
 
-alias cs='find . -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > cscope.files;cscope -q -R -b -i cscope.files'
+alias cs='find . -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > cscope.files;cscope -k -q -R -b -i cscope.files'
 
