@@ -8,8 +8,9 @@ call vundle#begin()
 
 Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-smooth-scroll'
 Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
@@ -26,7 +27,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 let g:solarized_termcolors=256
 
 "set exrc
@@ -157,7 +158,7 @@ let g:ctrlp_regexp=1
 
 
 """""" cscope plugin
-source ~/.vim/plugin/cscope_maps.vim
+source ~/dot_files/cscope_maps.vim
 
 """"" a.vim (switcher between header/cpp)
 
@@ -174,5 +175,12 @@ source ~/.vim/plugin/cscope_maps.vim
 " <Leader>ih switches to file under cursor
 " <Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp)
 " <Leader>ihn cycles through matches 
+
+""""" smooth scrolling
+
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 22, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 22, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 22, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 22, 4)<CR>
 
 
