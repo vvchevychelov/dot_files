@@ -29,7 +29,7 @@ alias qt='sudo /opt/Qt/Tools/QtCreator/bin/qtcreator'
 alias cs='find . -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > cscope.files;cscope -k -q -R -b -i cscope.files'
 alias fecorouter='ssh-keygen -f "/home/nix/.ssh/known_hosts" -R 192.168.255.1; ssh -i ~/.ssh/ecorouter root@192.168.255.1'
 alias ecorouter='ssh -i ~/.ssh/ecorouter root@192.168.255.1'
-alias pr='cd ~/projects/data-plane/'
+alias pr='cd ~/projects/dplane/'
 
 #editcap -S -1.0 2.pcap 3.pcap
 #mergecap 1.pcap 2.pcap -w 3.pcap

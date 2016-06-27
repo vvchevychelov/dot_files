@@ -39,8 +39,8 @@ let mapleader = ","
 " buffers switching
 nnoremap _ :bp<CR>
 nnoremap + :bn<CR>
-nnoremap :bs :buffers<CR>
-nnoremap :ts :tabs<CR>
+nnoremap <leader>bs :buffers<CR>
+nnoremap <leader>ts :tabs<CR>
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
@@ -61,6 +61,12 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+if has("gui_running")
+    map  <silent>  <S-Insert>  "+p
+    imap <silent>  <S-Insert>  <Esc>"+pa
+endif
+noremap <LeftRelease> "+y<LeftRelease>
 
 
 set pastetoggle=<F9>
