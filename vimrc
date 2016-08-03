@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+"filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -8,10 +8,13 @@ call vundle#begin()
 
 Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -28,6 +31,7 @@ filetype plugin indent on    " required
 
 set background=dark
 " colorscheme solarized
+colorscheme molokai
 let g:solarized_termcolors=256
 
 "set exrc
@@ -63,8 +67,10 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 if has("gui_running")
-    map  <silent>  <S-Insert>  "+p
-    imap <silent>  <S-Insert>  <Esc>"+pa
+    map  <silent>  <S-Insert>  "+gP
+    imap <silent>  <S-Insert>  <Esc>"+gP
+    " map  <silent>  <S-Insert>  "+p
+    " imap <silent>  <S-Insert>  <Esc>"+pa
 endif
 noremap <LeftRelease> "+y<LeftRelease>
 
@@ -188,5 +194,9 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 22, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 22, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 22, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 22, 4)<CR>
+
+
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
 
 
